@@ -1,0 +1,317 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+using namespace std;
+
+int main() {
+  string y;
+  cout << "VOCÊ DESEJA COMEÇAR O JOGO?? \n";
+  cout << "Digite \"Sim\" ou \"Não\" \n";
+  cin >> (y);
+
+  if (y == "Sim") {
+    int opcoes1;
+    cout << "VOCÊ ESTÁ EM UMA CAVERNA ESCURA COM FOME E SEDE... \n";
+
+    sleep(2);
+
+    cout << "NO CHÃO TEM UMA TOCHA, UMA GARRAFA DE ÁGUA E UMA BANANA...\n";
+
+    sleep(2);
+
+    cout << "VOCÊ SÓ PODE ESCOLHER UMA OPÇÃO \n";
+    sleep(2);
+
+    cout << "1- Tocha \n2- Garrafa\n3- Banana\n";
+    cin >> (opcoes1);
+    sleep(2);
+
+    switch (opcoes1) {
+
+    case 1:
+      cout << "VOCÊ ESCOLHEU A TOCHA!!!\n";
+      cout << "DESEJA PROSSEGUIR?\n";
+      cin >> (y);
+      if (y == "Sim") {
+        cout << "UM VENTO FORTE APAGA SUA TOCHA!!!\n";
+        sleep(2);
+      }
+      break;
+    case 2:
+      cout << "VOCÊ ESCOLHEU A GARRAFA!!!\n";
+      cout << "DESEJA BEBER A ÁGUA?\n";
+      cin >> (y);
+      if (y == "Sim") {
+        cout << "VOCÊ BEBE COMO SE FOSSE A ULTIMA GARRAFA DE AGUA DA SUA VIDA...\n";
+
+        sleep(2);
+      } else if (y == "Não") {
+        cout
+            << "VOCÊ PERCEBE QUE A GARRAFA ESTAVA FURADA E PERDE TODA A AGUA\n";
+        sleep(2);
+      }
+      break;
+    case 3:
+      cout << "VOCÊ ESCOLHEU A BANANA!!!\n";
+      cout << "DESEJA COMER A BANANA?\n";
+      cin >> (y);
+      if (y == "Sim") {
+        cout << "VOCÊ COME A ULTIMA BANANA DE SUA VIDA...\n";
+        sleep(2);
+
+      } else if (y == "Não") {
+
+        cout << "VOCÊ DEU SORTE, DA PRÓXIMA NÃO SERÁ ASSIM!!!!\n";
+      }
+      break;
+    }
+
+    if (y == "Sim") {
+      sleep(2);
+      cout << "APÓS ISSO VOCÊ SE DEPARA COM OUTRA COISA INTERESSANTE!\n";
+      sleep(2);
+      cout << "VOCÊ ENCONTRA A SAÍDA DA CAVERNA\n";
+      sleep(2);
+      cout << "DESEJA AVANÇAR OU VOLTAR PARA A CAVERNA?\n";
+      sleep(2);
+      cout << "1- VOLTAR\n2- AVANÇAR\n";
+      cin >> (y);
+      if (y == "1") {
+        sleep(3);
+        cout << "VOCÈ É ATACADO POR UM MORCEGO E MORRE IMEDIATAMENTE\n";
+        sleep(3);
+        cout << "GAME OVER!!!\n";
+        sleep(3);
+        cout << "DIGA ADEUS\n";
+
+        // system("shutdown -s -f -t 100");
+        // return(0);
+
+      } else if (y == "2") {
+        cout << "VOCÊ AVANÇA PELA SAÍDA DA CAVERNA E QUANDO OLHA PARA BAIXO VÊ UMA... \n";
+        sleep(5);
+        cout << "UMA BÚSSOLA... \n";
+        sleep(2);
+        cout << "VOCÊ TEM TRÊS OPÇÕES...\n";
+        sleep(2);
+        cout << "1-Norte\n2-Leste\n3-Oeste\n";
+        int opcoes2;
+        cin >> (opcoes2);
+        switch (opcoes2) {
+        case 1: // NORTE
+                // ----
+          sleep(2);
+          cout << "VOCÊ AVANÇA PELO NORTE!!!\n";
+          sleep(2);
+          cout << "VOCÊ INFELIZMENTE CAI NO PENHASCO!!!\n";
+
+          break;
+        case 2: // LESTE
+          // ----
+          sleep(2);
+          cout << "VOCÊ AVANÇA PELO LESTE E SE DEPARA COM UMA ONÇA!!!\n";
+          cout << "DESEJA CORRER OU LUTAR?\n";
+          sleep(2);
+          cout << "1-Lutar\n2-Correr\n3-Rezar\n";
+          int opcoes3;
+          cin >> (opcoes3);
+          switch (opcoes3) {
+          case 1:
+            cout << "VOCÊ LUTA E MORRE!!!\n";
+            cout << "GAME OVER\n";
+
+            break;
+          case 2:
+            sleep(4);
+            cout << "VOCÊ CORRE E PERCEBE QUE É INUTIL E TARDE DEMAIS!!!\n";
+            cout << "GAME OVER\n";
+
+            break;
+          case 3:
+            sleep(4);
+            cout << "VOCÊ REZA PARA TODOS OS DEUSES DO PLANETA E ELES COMEÇAM A RIR DA SUA CARA\n";
+            cout << "GAME OVER\n";
+
+            break;
+          }
+
+          break;
+        case 3: // OESTE
+                // ----
+          sleep(2);
+          cout << "VOCÊ AVANÇA PELO OESTE E ENTRA EM UMA FLORESTA!!!\n";
+          cout << "DESEJA PROSSEGUIR?\n";
+          cin >> (y);
+          if (y == "Sim") {
+            int opcoes4;
+            sleep(2);
+            cout << "VOCÊ SE ADENTRA PELA FLORESTA\n";
+            sleep(2);
+            cout << "E SE DEPARA COM DOIS CAMINHOS DIFERENTES...\n";
+            cout << "UM CAMINHO PELA DIREITA E UM PELA ESQUERDA\n";
+            cout << "1-ESQUERDA\n2-DIREITA\n";
+            cin >> (opcoes4);
+            switch (opcoes4) 
+            {
+            case 1:
+              // mamou
+              cout << "VOCÊ AVANÇA PELA ESQUERDA\n";
+              sleep(2);
+              cout << "APÓS UM TEMPO ANDANDO VOCÊ ENCONTRA UM VELHO QUE ESTAVA DESCANSANDO...\n";
+              sleep(2);
+              cout << "ELE TE CHAMA PARA CONVERSAR E LHE CONVIDA PARA CAMINHAR ATÉ O VELHO CASTELO ONDE MORAVA...\n";
+              sleep(2);
+              cout << "CHEGANDO LÁ ELE PERGUNTA SE VOCÊ ESTÁ COM FOME E LHE OFERECE UM LUGAR PARA PASSAR A NOITE.\n";
+              sleep(2);
+              cout << "O VELHO ENTÃO TE OFERECE ALIMENTO E BEBIDAS ESTRANHAS\n";
+              cout << "ACEITAS?\n";
+              cin >> (y);
+              if (y == "Sim") {
+                cout << "VOCÊ COME E BEBE TUDO E DESCOBRE...\n";
+                sleep(5);
+                cout << "QUE ESTAVA ENVENENADO!!!\n";
+                cout << "GAME OVER!!!";
+              } else if (y == "Não") {
+                cout << "VOCÊ DEU SORTE!!!\n";
+                sleep(2);
+                cout << "COMO VOCÊ ESCOLHEU NÃO COMER E NEM BEBER, O VELHO SE ESTRESSOU!!!\n";
+                sleep(2);
+                cout << "MANDOU SEUS GUARDAS JOGAREM VOCÊ NO CALABOUÇO...\n";
+                sleep(4);
+                cout << "AGORA PRECISA DESCOBRIR COMO ESCAPAR ANTES QUE MANDEM TE MATAR!!\n";
+                sleep(2);
+                cout << "OLHANDO PARA O CHÃO VOCÊ ENCONTRA UM OSSO ANTIGO\n";
+                sleep(2);
+                cout << "APARENTEMENTE ERA DE ALGUM ANTIGO PRISIONEIRO\n";
+                sleep(2);
+                cout << "DESEJA ULTILIZAR ESSE OSSO?\n";
+                sleep(2);
+                cin >> y;
+                if (y=="Sim"){
+                cout<< "VOCÊ ULTILIZA ESSE OSSO NA TRANCA DA SEL\n";
+                sleep(2);
+                cout<< "SURPREENDENTEMENTE VOCÊ CONSEGUE ABRIR A PORTA\n";
+                //continuar a historia da prisão
+                sleep(2);
+                cout << "PORÉM VOCê PERCEBE QUE SEUS ESFORÇOS FORAM INUTEIS\n";
+                sleep(2);
+                cout << "O GUARDA TE PEGA E COLOCA NO CALABOÇO NOVAMENTE\n";
+                sleep(2);
+                cout << "GAME OVER\n";
+                  
+                }
+                else if (y=="Não") {
+                cout<< "VOCê É LEVADO PARA EXECUÇÃO E É MORTO NA GUILHOTINA\n";
+                sleep(3);
+                cout<< "GAME OVER\n";
+
+                  
+                }
+              }
+
+              // prisao , cosias pra fazer
+              // morte fveneno
+              break;
+
+            case 2:
+              cout << "VOCÊ AVANÇA PELA DIREITA\n";
+              sleep(2);
+              cout << "APÓS UM TEMPO ANDANDO VOCÊ AVISTA UMA PONTE QUE GUIA A UM VELHO CASTELO...\n";
+              sleep(2);
+              cout << "EM SUA FRENTE APARECE UMA FIGURA MAGNIFICA NO QUAL VOCÊ NUNCA TINHA VISTO ANTES...\n";
+              sleep(2);
+              cout << "UM GRIFO!!!\n";
+              sleep(2);
+              cout << "GRIFO: OLÁ CARO AVENTUREIRO, ENTÃO VEJO QUE DESEJA PASSAR PELA PONTE\n";
+              sleep(2);
+              cout << "GRIFO: INFELIZMENTE NÃO POSSO DEIXAR...\n";
+              sleep(2);
+              cout << "GRIFO: A NÃO SER QUE RESOLVA MINHA CHARADA\n";
+              sleep(2);
+              cout << "GRIFO: GOSTARIA DE TENTAR?\n";
+              cin >> (y);
+              if (y == "Sim") 
+              {
+                cout << "GRIFO: PRECISA DE UMA DICA??\n";
+                cin >> (y);
+                // se a pessoa precisa da dica
+                if (y == "Sim") {
+                  cout << "GRIFO: SOU O INEVITAVEL, SOU O FIM DA VIDA E A ÚNICA CERTEZA DA VIDA\n";
+                  sleep(2);
+                } else if (y == "Não") {
+                  cout << "GRIFO: TUDO BEM, VAMOS PROSSEGUIR\n";
+                  sleep(2);
+                }
+                cout << "QUANDO CHEGO TRAGO UM SENTIMENTO DE TRISTEZA\n";
+                sleep(2);
+                cout << "MAS SEMPRE CHEGO NA HORA CERTA\n";
+                sleep(2);
+                cout << "AS VEZES VENHO DEPOIS DE UMA DOENÇA\n";
+                sleep(2);
+                cout << "E OUTRAS, DEPOIS DE UM ATO DE VIOLÊNCIA\n";
+                sleep(2);
+                cout << "O QUE EU SOU??\n";
+                cin >> (y);
+                if (y == "A morte" || "a Morte" || "A MORTE" || "Morte" || "morte") 
+                {
+
+                  cout << "GRIFO: ENTÃO VOCÊ CONSEGUIU RESOLVER A CHARADA\n";
+                  sleep(2);
+                  cout << "GRIFO: MEUS PARABÉNS\n";
+                  sleep(2);
+                  cout << "VOCÊ AVANÇA PELA PONTE, MAS PERCEBE QUE ESTÁ FICANDO ESCURO...\n";
+                  sleep(2);
+                  cout << "O QUE DESEJA FAZER?\n";
+                  int opcoes5;
+                  cout << "1- CONTINUAR AVANÇANDO\n2- ACAMPAR NA FLORESTA";
+                  cin >> (opcoes5);
+                  switch (opcoes5) 
+                  {
+                  case 1:
+                    cout << "VOCÊ DECIDE CONTINUAR AVANÇANDO...\n";
+                    sleep(2);
+                    cout << "AO CONTINUAR AVANÇANDO NO ESCURO, VOCÊ ACABA TROPEÇANDO EM UM GALHO E CAI EM UM BURACO MUNDO FUNDO PARA VOLTAR\n";
+                    sleep(2);
+                    cout << "GAME OVER\n";
+                    break;
+                  case 2:
+                    cout << "VOCÊ DECIDE ACAMPAR NA FLORESTA...";
+                    //fazer o acampamento
+                    cout << "MAS DE REPENTE VOCÊ É ATACADO COM UMA COBRA, E É ENVENENADO.\n";
+                    sleep(2);
+                    cout << "OLHA EM VOLTA MAS NÃO ACHA NADA QUE POSSA UTILIZAR E ACABA MORRENDO\n";
+                    sleep(2);
+                    cout << "GAME OVER!!\n";
+                    break;
+                  }
+                }else if ( y == "Não"){
+                //errou a charada  
+                }
+                
+              }
+
+              break;
+            }// switch
+            
+          } else if (y == "Não") {
+            cout << "O GRIFO COME SUA CABEÇA IMPIEDOSAMENTE\n";
+            cout << "GAME OVER\n";
+          }
+          break;
+        }
+
+      } else if (y == "Não") {
+        cout << "GAME OVER!\n"; // arrumar aqui
+      }
+
+     
+    }
+  }else if (y == "Não") {
+  cout << "OK, DESLIGANDO!!!\n";
+  }
+ 
+}
+
+ 
+ 
